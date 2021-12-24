@@ -1,36 +1,32 @@
-import logo from "./logo.svg";
 import "./App.css";
+import data from "./user.json";
+// import Props from './components/Profile';
 
 function App() {
   return (
-    <div class="profile">
-      <div class="description">
-        <img
-          // src={avatar}
-          alt="User avatar"
-          class="avatar"
-        />
-        <p class="name">Petra Marica</p>
-        <p class="tag">@pmarica</p>
-        <p class="location">Salvador, Brasil</p>
+    <div className="profile">
+      <div className="description">
+        <img src={data.avatar} alt="User avatar" className="avatar" />
+        <p className="name">{data.username}</p>
+        <p className="tag">{data.tag}</p>
+        <p className="location">{data.location}</p>
       </div>
 
-      <ul class="stats">
+      <ul className="stats">
         <li>
-          <span class="label">Followers</span>
-          <span class="quantity">1000</span>
+          <span className="label">Followers</span>
+          <span className="quantity">{data.followers}</span>
         </li>
         <li>
-          <span class="label">Views</span>
-          <span class="quantity">2000</span>
+          <span className="label">Views</span>
+          <span className="quantity">{data.views}</span>
         </li>
         <li>
-          <span class="label">Likes</span>
-          <span class="quantity">3000</span>
+          <span className="label">Likes</span>
+          <span className="quantity">{data.likes}</span>
         </li>
       </ul>
     </div>
   );
 }
-
 export default App;

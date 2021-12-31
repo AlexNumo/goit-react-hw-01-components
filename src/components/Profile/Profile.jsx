@@ -1,24 +1,25 @@
-import props from "../user.json";
+// import props from "./user.json";
 import { UserCards, Description, Avatar, Name, Tag, Location, Stats, Label, Quantity } from './Profile.styled';
-import { MdAlternateEmail } from 'react-icons/Md'
+import { MdAlternateEmail } from 'react-icons/md';
+// import PropTypes from "prop-types";
 
-function UserCard() {
+function UserCard({username, tag, location, avatar, stats}) {
   return (
     <UserCards>
       <Description>
-        <Avatar src={props.avatar}>
+        <Avatar src={ avatar }>
         </Avatar>
-        <Name>{ props.username }</Name>
-        <Tag><MdAlternateEmail />{ props.tag }</Tag>
-        <Location>{ props.location }</Location>
+        <Name>{ username }</Name>
+        <Tag><MdAlternateEmail />{ tag }</Tag>
+        <Location>{ location }</Location>
       </Description>
       <Stats>
         <Label>Folowers</Label>
-        <Quantity>{props.stats.followers}</Quantity>
+        <Quantity>{ stats.followers }</Quantity>
         <Label>Views</Label>
-        <Quantity>{props.stats.views }</Quantity>
+        <Quantity>{ stats.views }</Quantity>
         <Label>Likes</Label>
-        <Quantity>{ props.stats.likes }</Quantity>
+        <Quantity>{ stats.likes }</Quantity>
       </Stats>
     </UserCards>
   );

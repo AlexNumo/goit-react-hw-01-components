@@ -1,18 +1,13 @@
 import styled from 'styled-components';
 
 export const UserCards = styled.div`
-    width: 1000px;
-    height: 1000px;
+    padding: 10px;
     background-color: grey;
 `;
 
 export const Description = styled.div`
-    position: relative;
     width: 400px;
     height: 500px;
-    margin: auto;
-    top: 250px;
-    /* margin-top: ; */
     background-color: white;
     border-radius: 2%;
 
@@ -36,15 +31,26 @@ export const Name = styled.p`
 
 export const Tag = styled.p`
     text-align: center;
-    
+    color: #8e8e97d1;
+    font-weight: 400;
+    font-size: 20px;
 
 `;
 
 export const Location = styled.p`
     text-align: center;
+    color: #8e8e97d1;
+    font-weight: 400;
+    font-size: 20px;
 `;
 
 export const Stats = styled.ul`
+    position: relative;
+    top: -150px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    
 
 `;
 

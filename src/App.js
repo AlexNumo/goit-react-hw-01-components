@@ -1,32 +1,23 @@
 import "./App.css";
-import data from "./user.json";
-// import Props from './components/Profile';
+import UserCard from "./components/Profile/Profile";
+import user from "./components/Profile/user.json";
+import data from "./components/Statistics/data.json";
+import Statistics from "./components/Statistics/Statistics";
 
 function App() {
   return (
-    <div className="profile">
-      <div className="description">
-        <img src={data.avatar} alt="User avatar" className="avatar" />
-        <p className="name">{data.username}</p>
-        <p className="tag">{data.tag}</p>
-        <p className="location">{data.location}</p>
-      </div>
-
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{data.followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{data.views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{data.likes}</span>
-        </li>
-      </ul>
+    <div>
+      <UserCard
+        userName={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
+      <Statistics data={data} />
     </div>
   );
 }
 export default App;
+
+// console.log({data.map((dataElem))};

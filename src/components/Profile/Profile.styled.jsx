@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
 export const UserCards = styled.div`
-    padding: 10px;
-    background-color: grey;
+    width: 400px;
+    border-radius: 10px;
+    background-color: white;
+        ul{
+        padding: 0px;
+    }
 `;
 
 export const Description = styled.div`
-    width: 400px;
-    height: 500px;
-    background-color: white;
-    border-radius: 2%;
 
 `;
 
@@ -45,13 +45,29 @@ export const Location = styled.p`
 `;
 
 export const Stats = styled.ul`
-    position: relative;
-    top: -150px;
     display: flex;
-    flex-wrap: wrap;
-    width: 400px;
-    
+    align-content: center;
+    justify-content: space-around;
+    background-color: #e9e3e3;
+    border-radius: 10px;
+`;
 
+export const Info = styled.li`
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #8e8e97d1;
+    font-weight: 700;
+    font-size: 20px;
+    flex-grow: 1;
+    padding-bottom: 20px;
+    padding-top: 30px;
+    border-top:1px solid black;
+    :nth-of-type(2){
+      border-left:1px solid black; 
+      border-right:1px solid black;   
+    }
 `;
 
 export const Label = styled.span`
@@ -59,6 +75,8 @@ export const Label = styled.span`
 `;
 
 export const Quantity = styled.span`
-
+    color: black;
+    font-weight: 700;
+    padding-top: 5px;
 `;
 

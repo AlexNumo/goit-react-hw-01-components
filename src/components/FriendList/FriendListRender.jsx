@@ -5,13 +5,13 @@ import { FriendList } from "./FriendList.styled";
 function RenderFriendList({ friendsInfo }) {
     return (
         <FriendList>
-            {friendsInfo.map(function (friendInfo) { 
+            {friendsInfo.map(function (elem) { 
                 return(
                 <FriendsList
-                    key={friendInfo.id}
-                    avatar={friendInfo.avatar}
-                    name={friendInfo.name}
-                    isOnline={friendInfo.isOnline}
+                    key={elem.id}
+                    avatar={elem.avatar}
+                    name={elem.name}
+                    isOnline={elem.isOnline}
                 />)
             })
             }

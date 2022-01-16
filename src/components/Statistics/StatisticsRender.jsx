@@ -2,12 +2,12 @@ import { AiOutlinePercentage } from "react-icons/ai";
 import { Statistic, Title, StatList, Item } from "./Statistics.styled";
 import PropTypes from "prop-types";
  
-function StatisticsRender({data}) { 
+function StatisticsRender({stats, title}) { 
     return (
      <Statistic>
-        <Title>Upload stats</Title>
+            {title && <Title>{title}</Title>}
         <StatList>
-            {data.map(function (dataElem) {
+            {stats.map(function (dataElem) {
                 return (
                     <Item key={dataElem.id}>
                         <span className="label">{dataElem.label}</span>

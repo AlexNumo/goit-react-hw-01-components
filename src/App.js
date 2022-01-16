@@ -1,12 +1,12 @@
 import "./App.styled.jsx";
 import UserCard from "./components/Profile/Profile";
-import user from "./components/Profile/user.json";
+import user from "./data/user.json";
 import StatisticsRender from "./components/Statistics/StatisticsRender";
-import data from "./components/Statistics/data.json";
+import data from "./data/data.json";
 import RenderFriendList from "./components/FriendList/FriendListRender";
-import friendsInfo from "./components/FriendList/friends.json";
+import friendsInfo from "./data/friends.json";
 import TransactionHistoryRender from "./components/TransactionHistory/TransactionHistoryRender";
-import transactions from "./components/TransactionHistory/transactions.json";
+import transactions from "./data/transactions.json";
 import { StyleHW } from "./App.styled";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
         avatar={user.avatar}
         stats={user.stats}
       />
-      <StatisticsRender data={data} />
+      <StatisticsRender stats={data} title={data.title} />
       <RenderFriendList friendsInfo={friendsInfo} />
       <TransactionHistoryRender items={transactions} />
     </StyleHW>
